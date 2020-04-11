@@ -1,0 +1,26 @@
+{
+  "manifest_version": 2,
+  "name": "YoutubeComment",
+  "short_name": "TubeComment",
+  "version": "0.1",
+  "description": "YouTubeの再生時間付きのコメントを一覧表示",
+  "browser_action": {
+    "default_icon": {
+      "19": "icons/icon16.png"
+    },
+    "default_title": "TubeComment",
+    "default_popup": "popup/popup.html"
+  },
+  "content_scripts": [
+    {
+      "matches": ["https://www.youtube.com/*", "https://www.google.com/*"],
+      "js": ["dist/build.js"]
+    }
+  ],
+  "background": {
+    "parsistent": false
+  },
+  "permissions": [
+    "tabs"
+  ]
+}

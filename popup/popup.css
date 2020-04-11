@@ -1,0 +1,14 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body{
+  width: 250px;
+  height: 250px;
+  font-size: 13px;
+}
+
+h1 {
+  font-size: 1.3rem;
+}
