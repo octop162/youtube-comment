@@ -1,27 +1,20 @@
 <template>
   <div id="app">
-    <h1>{{ msg }}</h1>
+    <Comments v-drag style="position: absolute;"/>
   </div>
 </template>
 
 <script>
+import Comments from './Comments.vue'
+import drag from '@branu-jp/v-drag'
+
 export default {
   name: 'app',
-  data () {
-    return {
-      msg: 'Welcome to Your Vue.js App'
-    }
+  components: {
+    Comments,
+  },
+  directives: {
+    drag
   }
 }
 </script>
-
-<style>
-#app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
-}
-
-h1 {
-  font-weight: bold;
-  font-size: 3rem;
-}
-</style>
